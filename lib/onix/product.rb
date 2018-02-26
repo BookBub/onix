@@ -11,6 +11,7 @@ module ONIX
     xml_accessor :product_identifiers, :from => "ProductIdentifier", :as => [ONIX::ProductIdentifier]
     xml_accessor :product_form, :from => "ProductForm"
     xml_accessor :product_form_detail, :from => "ProductFormDetail"
+    xml_accessor :product_content_type, :from => "ProductContentType"
     xml_accessor :series, :from => "Series", :as => [ONIX::Series]
     xml_accessor :titles, :from => "Title", :as => [ONIX::Title]
     xml_accessor :websites, :from => "Website", :as => [ONIX::Website]

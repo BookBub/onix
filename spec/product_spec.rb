@@ -23,6 +23,7 @@ describe ONIX::Product do
     product.publishing_status.should eql(4)
     product.publication_date.should eql(Date.civil(1998,9,1))
     product.year_first_published.should eql(1998)
+    product.product_content_type.should eql("01")
 
     # including ye olde, deprecated ones
     product.height.should eql(100)
@@ -50,6 +51,11 @@ describe ONIX::Product do
   it "should provide read access to measurements" do
     product = ONIX::Product.from_xml(@product_node.to_s)
     product.measurements.size.should eql(1)
+  end
+
+  it "should provide read access to product content types" do
+    product = ONIX::Product.from_xml(@product_node.to_s)
+    product.product_content_type.should eql("01")
   end
 
   it "should provide write access to first level attributes" do
