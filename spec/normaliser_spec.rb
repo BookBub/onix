@@ -19,12 +19,8 @@ describe ONIX::Normaliser, "with a simple short tag file" do
 
     File.file?(@outfile).should be_true
     content = File.read(@outfile)
-    puts "content: ", content
     content.include?("<m174>").should be_false
     content.include?("<FromCompany>").should be_true
-
-    content.include?("<m185>").should be false
-    content.include?("<ProductContentType>").should be true
   end
 end
 
