@@ -6,7 +6,7 @@ module ONIX
 
     xml_name "Language"
 
-    xml_accessor :language_role,        :from => "LanguageRole", :as => Fixnum, :to_xml => ONIX::Formatters.two_digit
+    xml_accessor :language_role,        :from => "LanguageRole", :as => Integer, :to_xml => ONIX::Formatters.two_digit
     xml_accessor :language_code,        :from => "LanguageCode"
     xml_accessor :country_code,         :from => "CountryCode"
   end

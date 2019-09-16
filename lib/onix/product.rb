@@ -7,7 +7,7 @@ module ONIX
     xml_name "Product"
 
     xml_accessor :record_reference, :from => "RecordReference"
-    xml_accessor :notification_type, :from => "NotificationType", :as => Fixnum, :to_xml => ONIX::Formatters.two_digit
+    xml_accessor :notification_type, :from => "NotificationType", :as => Integer, :to_xml => ONIX::Formatters.two_digit
     xml_accessor :product_identifiers, :from => "ProductIdentifier", :as => [ONIX::ProductIdentifier]
     xml_accessor :product_form, :from => "ProductForm"
     xml_accessor :product_form_detail, :from => "ProductFormDetail"
@@ -16,9 +16,9 @@ module ONIX
     xml_accessor :titles, :from => "Title", :as => [ONIX::Title]
     xml_accessor :websites, :from => "Website", :as => [ONIX::Website]
     xml_accessor :contributors, :from => "Contributor", :as => [ONIX::Contributor]
-    xml_accessor :edition_number, :from => "EditionNumber", :as => Fixnum
+    xml_accessor :edition_number, :from => "EditionNumber", :as => Integer
     xml_accessor :languages, :from => "Language", :as => [ONIX::Language]
-    xml_accessor :number_of_pages, :from => "NumberOfPages", :as => Fixnum
+    xml_accessor :number_of_pages, :from => "NumberOfPages", :as => Integer
     xml_accessor :basic_main_subject, :from => "BASICMainSubject"
     xml_accessor :bic_main_subject, :from => "BICMainSubject"
     xml_accessor :subjects, :from => "Subject", :as => [ONIX::Subject]
@@ -28,7 +28,7 @@ module ONIX
     xml_accessor :media_files, :from => "MediaFile", :as => [ONIX::MediaFile]
     xml_accessor :imprints, :from => "Imprint", :as => [ONIX::Imprint]
     xml_accessor :publishers, :from => "Publisher", :as => [ONIX::Publisher]
-    xml_accessor :publishing_status, :from => "PublishingStatus", :as => Fixnum, :to_xml => ONIX::Formatters.two_digit
+    xml_accessor :publishing_status, :from => "PublishingStatus", :as => Integer, :to_xml => ONIX::Formatters.two_digit
     xml_accessor(:publication_date, :from => "PublicationDate", :to_xml => ONIX::Formatters.yyyymmdd) do |val|
       begin
         Date.parse(val)
@@ -37,7 +37,7 @@ module ONIX
       end
     end
     xml_accessor :copyright_year, :from => "CopyrightYear", :as => Integer
-    xml_accessor :year_first_published, :from => "YearFirstPublished", :as => Fixnum
+    xml_accessor :year_first_published, :from => "YearFirstPublished", :as => Integer
     xml_accessor :sales_restrictions, :from => "SalesRestriction", :as => [ONIX::SalesRestriction]
     xml_accessor :measurements, :from => "Measure", :as => [ONIX::Measure]
     xml_accessor :supply_details, :from => "SupplyDetail", :as => [ONIX::SupplyDetail]

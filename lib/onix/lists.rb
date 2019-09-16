@@ -82,7 +82,7 @@ module ONIX
 
     # return a hash with the data for a single code list.
     #
-    # number should be a fixnum specifying the list to retrieve
+    # number should be a Integer specifying the list to retrieve
     #
     #  ONIX::Lists.instance.list(7)
     #  => { "BB" => "Hardback", ... }
