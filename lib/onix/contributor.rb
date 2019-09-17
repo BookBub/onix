@@ -6,10 +6,10 @@ module ONIX
 
     xml_name "Contributor"
 
-    xml_accessor :sequence_number,             :from => "SequenceNumber", :as => Fixnum
+    xml_accessor :sequence_number,             :from => "SequenceNumber", :as => Integer
     xml_accessor :contributor_role,            :from => "ContributorRole"
     xml_accessor :language_code,               :from => "LanguageCode"
-    xml_accessor :sequence_number_within_role, :from => "SequenceNumberWithinRole", :as => Fixnum
+    xml_accessor :sequence_number_within_role, :from => "SequenceNumberWithinRole", :as => Integer
     xml_accessor :person_name,                 :from => "PersonName"
     xml_accessor :person_name_inverted,        :from => "PersonNameInverted"
     xml_accessor :titles_before_names,         :from => "TitlesBeforeNames"
@@ -23,7 +23,7 @@ module ONIX
     xml_accessor :corporate_name,              :from => "CorporateName"
     xml_accessor :biographical_note,           :from => "BiographicalNote"
     xml_accessor :contributor_description,     :from => "ContributorDescription"
-    xml_accessor :unnamed_persons,             :from => "UnnamedPersons", :as => Fixnum, :to_xml => ONIX::Formatters.two_digit
+    xml_accessor :unnamed_persons,             :from => "UnnamedPersons", :as => Integer, :to_xml => ONIX::Formatters.two_digit
     xml_accessor :country_code,                :from => "CountryCode"
     xml_accessor :region_code,                 :from => "RegionCode"
     xml_accessor :person_name_identifiers,     :from => "PersonNameIdentifier", :as => [ONIX::PersonNameIdentifier]
