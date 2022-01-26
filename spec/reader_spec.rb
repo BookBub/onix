@@ -30,7 +30,7 @@ describe ONIX::Reader do
   it "should provide access to various XML metadata from file" do
     filename = File.join(@data_path, "reference_with_release_attrib.xml")
     reader = ONIX::Reader.new(filename)
-    reader.release.should eql(BigDecimal.new("2.1"))
+    reader.release.should eql(BigDecimal("2.1"))
   end
 
   it "should provide access to the header in an ONIX file" do
