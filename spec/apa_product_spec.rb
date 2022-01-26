@@ -78,7 +78,7 @@ describe ONIX::APAProduct, "price method" do
     @product = ONIX::Product.from_xml(@product_node.to_s)
     @apa     = ONIX::APAProduct.new(@product)
 
-    @apa.price.should eql(BigDecimal.new("99.95"))
+    @apa.price.should eql(BigDecimal("99.95"))
   end
 end
 
@@ -94,7 +94,7 @@ describe ONIX::APAProduct, "rrp_exc_sales_tax method" do
     @product = ONIX::Product.from_xml(@product_node.to_s)
     @apa     = ONIX::APAProduct.new(@product)
 
-    @apa.rrp_exc_sales_tax.should eql(BigDecimal.new("99.95"))
+    @apa.rrp_exc_sales_tax.should eql(BigDecimal("99.95"))
   end
 end
 
