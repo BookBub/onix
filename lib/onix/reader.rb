@@ -80,6 +80,8 @@ module ONIX
 
     def initialize(input, *args)
       opts = args.last.kind_of?(Hash) ? args.pop : {}
+      opts = opts.reverse_merge(dtdload: true)
+
       if args.size > 0
         ActiveSupport::Deprecation.warn("Passing a klass as ONIX::Reader's second argument is deprecated, use the :product_class option instead", caller)
       end
@@ -87,9 +89,15 @@ module ONIX
 
       if input.kind_of?(String)
         @file   = File.open(input, "r")
-        @reader = Nokogiri::XML::Reader(@file, nil, opts[:encoding]) { |cfg| cfg.dtdload.noent }
+        @reader = Nokogiri::XML::Reader(@file, nil, opts[:encoding]) do |cfg|
+          cfg.dtdload if opts[:dtdload]
+          cfg.noent
+        end
       elsif input.kind_of?(IO)
-        @reader = Nokogiri::XML::Reader(input, nil, opts[:encoding]) { |cfg| cfg.dtdload.noent }
+        @reader = Nokogiri::XML::Reader(input, nil, opts[:encoding]) do |cfg|
+          cfg.dtdload if opts[:dtdload]
+          cfg.noent
+        end
       else
         raise ArgumentError, "Unable to read from file or IO stream"
       end
