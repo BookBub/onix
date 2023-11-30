@@ -92,3 +92,26 @@ describe ONIX::Normaliser, "with a utf8 file that has illegal control chars" do
     content.include?("<TitleText>OXFORDPICTURE DICTIONARY CHINESE</TitleText>").should be_true
   end
 end
+
+describe ONIX::Normaliser, "with an iso-8859-1 file that has special chars" do
+
+  before(:each) do
+    @data_path = File.join(File.dirname(__FILE__),"..","data")
+    @filename  = File.join(@data_path, "iso_8859_1_data.xml")
+    @outfile   = @filename + ".new"
+  end
+
+  after(:each) do
+    # File.unlink(@outfile) if File.file?(@outfile)
+  end
+
+  it "should convert the file and special chars to utf-8" do
+    ONIX::Normaliser.process(@filename, @outfile)
+
+    File.file?(@outfile).should be_true
+    content = File.read(@outfile)
+
+    content.include?("<TitleText>Property Is a Girl's Best Friend</TitleText>").should be_true
+    content.include?("<PersonNameInverted>Küng, Hans</PersonNameInverted>").should be_true
+  end
+end
