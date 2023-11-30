@@ -93,7 +93,7 @@ describe ONIX::Normaliser, "with a utf8 file that has illegal control chars" do
   end
 end
 
-describe ONIX::Normaliser, "with an iso-8859-1 file that has special chars" do
+describe ONIX::Normaliser, "with a file with an incorrect encoding and a correct encoding provided" do
 
   before(:each) do
     @data_path = File.join(File.dirname(__FILE__),"..","data")
@@ -102,16 +102,39 @@ describe ONIX::Normaliser, "with an iso-8859-1 file that has special chars" do
   end
 
   after(:each) do
-    # File.unlink(@outfile) if File.file?(@outfile)
+    File.unlink(@outfile) if File.file?(@outfile)
   end
 
-  it "should convert the file and special chars to utf-8" do
-    ONIX::Normaliser.process(@filename, @outfile)
+  it "should treat the file as the given encoding and handle special characters" do
+    ONIX::Normaliser.process(@filename, @outfile, { encoding: 'UTF-8' })
 
     File.file?(@outfile).should be_true
     content = File.read(@outfile)
 
-    content.include?("<TitleText>Property Is a Girl's Best Friend</TitleText>").should be_true
-    content.include?("<PersonNameInverted>Küng, Hans</PersonNameInverted>").should be_true
+    content.include?("RITA®").should be_true
+    content.include?("face-to-face with her ex-fiancé").should be_true
+  end
+end
+
+describe ONIX::Normaliser, "with a file no encoding provided" do
+
+  before(:each) do
+    @data_path = File.join(File.dirname(__FILE__),"..","data")
+    @filename  = File.join(@data_path, "missing_header.xml")
+    @outfile   = @filename + ".new"
+  end
+
+  after(:each) do
+    File.unlink(@outfile) if File.file?(@outfile)
+  end
+
+  it "should treat the file as the given encoding and handle special characters" do
+    ONIX::Normaliser.process(@filename, @outfile, { encoding: 'ISO-8859-1' })
+
+    File.file?(@outfile).should be_true
+    content = File.read(@outfile)
+
+    content.include?("RITAÂ®").should be_true
+    content.include?("face-to-face with her ex-fiancÃ©").should be_true
   end
 end
