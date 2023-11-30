@@ -52,6 +52,7 @@ module ONIX
 
     def run
       # optional: adjust listed encoding
+      # has to come before the parsing for the short tags or original encoding will be used
       if @options['encoding']
         dest = next_tempfile
         force_encoding(@curfile, dest, @options['encoding'])
