@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE ONIXmessage SYSTEM "http://www.editeur.org/onix/2.1/short/onix-international.dtd">
+<ONIXmessage>
+
+<header>
+<m173>2141191</m173>
+<m174>R.R. Bowker</m174>
+<m175>Electronic Production Department, Toll Free 888-269-5372, Local 908-286-1090</m175>
+<m180>1</m180>
+<m182>20200504</m182>
+<m184>eng</m184>
+<m185>01</m185>
+<m186>USD</m186>
+<m187>in</m187>
+<m188>oz</m188>
+<m193>General trade</m193>
+</header>
+
+<product>
+<a001>GBR71341643</a001>
+<a002>03</a002>
+<a194>04</a194>
+<a197>R.R. Bowker</a197>
+<productidentifier>
+<b221>01</b221>
+<b233>Harlequin Mills &amp; Boon, Limited</b233>
+<b244>199044</b244></productidentifier>
+<productidentifier>
+<b221>02</b221>
+<b244>0008902011</b244></productidentifier>
+<productidentifier>
+<b221>03</b221>
+<b244>9780008902018</b244></productidentifier>
+<productidentifier>
+<b221>15</b221>
+<b244>9780008902018</b244></productidentifier>
+<b012>ED</b012>
+<b333>E200</b333>
+<b333>E101</b333>
+<b211>029</b211>
+<series>
+<seriesidentifier>
+<b273>01</b273>
+<b244>02008446</b244></seriesidentifier>
+<title>
+<b202>01</b202>
+<b203>Mills and Boon Medical Ser.</b203></title></series>
+<title>
+<b202>01</b202>
+<b203>Single Dad in Her Stocking / a Puppy and a Christmas Proposal</b203>
+<b029>Single Dad in Her Stocking / a Puppy and a Christmas Proposal</b029></title>
+<workidentifier>
+<b201>01</b201>
+<b233>Bowker</b233>
+<b244>65807867</b244></workidentifier>
+<contributor>
+<b034>1</b034>
+<b035>A01</b035>
+<b037>Roberts, Alison</b037>
+<b039>Alison</b039>
+<b040>Roberts</b040>
+<personnameidentifier>
+<b390>01</b390>
+<b233>Bowker</b233>
+<b244>00904141</b244></personnameidentifier>
+<personnameidentifier>
+<b390>16</b390>
+<b233>isni</b233>
+<b244>0000000044314600</b244></personnameidentifier>
+<b044>New Zealander Alison Roberts has written more than eighty romance novels for Harlequin Mills and Boon. She has also worked as a primary school teacher, a cardiology research technician and a paramedic. Currently, she is living her dream of living - and writing - in a gorgeous village in the south of France.</b044></contributor>
+<contributor>
+<b034>2</b034>
+<b035>A01</b035>
+<b037>George, Louisa</b037>
+<b039>Louisa</b039>
+<b040>George</b040>
+<personnameidentifier>
+<b390>01</b390>
+<b233>Bowker</b233>
+<b244>35065588</b244></personnameidentifier>
+<b044>Louisa George is a romance author who was selected as a finalist in the Romance Writers of America (RWA) awards which recognise excellence in published romance fiction. The award will be presented in New York in July 2015. Louisa George is a finalist in the short contemporary romance section of the RITA®, the highest international award of distinction for romance fiction. Her novel Enemies with Benefits, is one of 11 novels she has published to date with Harlequin Mills &amp; Boon, a subsidiary of HarperCollins and the world¿s largest publisher of romance fiction.</b044></contributor>
+<language>
+<b253>01</b253>
+<b252>eng</b252></language>
+<b064>FIC027020</b064>
+<b200>2011</b200>
+<subject>
+<b067>24</b067>
+<b171>Publisher-Provided BIC Subject Code</b171>
+<b069>FRD</b069></subject>
+<subject>
+<b067>24</b067>
+<b171>Publisher-Provided BISAC Subject Code</b171>
+<b069>FIC027410</b069></subject>
+<subject>
+<b067>24</b067>
+<b171>Publisher-Provided BISAC Subject Code</b171>
+<b069>FIC035000</b069></subject>
+<subject>
+<b067>24</b067>
+<b171>Publisher-Provided BISAC Subject Code</b171>
+<b069>FIC027290</b069></subject>
+<b073>01</b073>
+<othertext>
+<d102>01</d102>
+<d103>02</d103>
+<d104><![CDATA[<p>Single Dad in Her Stocking<br /> <br /> A family for Christmas...and for ever?</p> <p>After losing her baby, and sacrificing her paediatric career, Emma spends every Christmas as an emergency locum. This year she's covering A&E consultant Max Cunningham - the playboy turned single dad she once shared an unforgettable kiss with...</p> <p>A Puppy and a Christmas Proposal<br /> <br /> He's giving her paws for thought!</p> <p>The last thing warm-hearted vet Beth wants this Christmas is to come face-to-face with her ex-fiancé Alex, clutching an adorable puppy! But guarding her heart from the delicious doc becomes impossible when he finally reveals why he left...</p>]]></d104>
+</othertext>
+<productwebsite>
+<f170>Publisher's URL</f170>
+<f123>http://www.millsandboon.co.uk</f123></productwebsite>
+<imprint>
+<b241>02</b241>
+<b243>1154961</b243>
+<b079>Mills &amp; Boon</b079></imprint>
+<publisher>
+<b241>02</b241>
+<b243>26149</b243>
+<b081>Harlequin Mills &amp; Boon, Limited</b081></publisher>
+<b209>London</b209>
+<b083>GB</b083>
+<b394>04</b394>
+<b003>20191128</b003>
+<salesrights>
+<b089>01</b089>
+<b090>GB IE</b090></salesrights>
+<salesrights>
+<b089>02</b089>
+<b090>AF AX AL DZ AS AD AO AI AQ AG AR AM AW AZ BS BH BD BB BY BE BZ BJ BM BT BO BA BW BV BR IO BN BG BF BI KH CM KY CF TD CL CN CX CC CO KM CG CD CK CR CI HR CU CY CZ DK DJ DM DO EC EG SV GQ ER EE ET FK FO FJ FI FR GF PF TF GA GM GE DE GH GI GR GL GD GP GU GT GG GN GW GY HT HM VA HN HK HU IS IN ID IR IQ IM IL IT JM JP JE JO KZ KE KI KP KR KW KG LA LV LB LS LR LY LI LT LU MO MK MG MW MY MV ML MT MH MQ MR MU YT MX FM MD MC MN ME MS MA MZ MM NA NR NP NL NC NI NE NG NU NF MP NO OM PK PW PS PA PG PY PE PH PN PL PT PR QA RE RO RU RW BL SH KN LC MF PM VC WS SM ST SA SN RS SC SL SG SK SI SB SO ZA GS SS ES LK SD SR SJ SZ SE CH SY TW TJ TZ TH TL TG TK TO TT TN TR TM TC TV UG UA AE UM UY UZ VU VE VN VG VI WF EH YE ZM ZW AT CV</b090></salesrights>
+<salesrights>
+<b089>03</b089>
+<b090>US CA AU NZ</b090></salesrights>
+<supplydetail>
+<supplieridentifier>
+<j345>02</j345>
+<b233>Bowker</b233>
+<b244>00026149</b244></supplieridentifier>
+<j137>Harlequin Mills &amp; Boon, Limited</j137>
+<j272>customer.relations@hmb.co.uk</j272>
+<website>
+<b367>01</b367>
+<b295>http://www.millsandboon.co.uk</b295></website>
+<j138>GB</j138>
+<j396>20</j396>
+<j143>20191128</j143>
+<j192>02</j192></supplydetail></product>
+</ONIXmessage>

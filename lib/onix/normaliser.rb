@@ -51,6 +51,15 @@ module ONIX
     end
 
     def run
+      # optional: adjust listed encoding
+      # has to come before the parsing for the short tags or original encoding will be used
+      if @options['encoding']
+        dest = next_tempfile
+        force_encoding(@curfile, dest, @options['encoding'])
+        FileUtils.rm_rf(@curfile)
+        @curfile = dest
+      end
+
       # remove short tags
       if @head.include?("ONIXmessage")
         dest = next_tempfile
@@ -86,6 +95,24 @@ module ONIX
         tf.close!
       end
       p
+    end
+
+    # uses the optionally passed in encoding as the assumed encoding of the XML file.
+    # for use in cases where the encoding in the file is known to be incorrect.
+    #
+    def force_encoding(src, dest, encoding)
+      inpath = File.expand_path(src)
+      outpath = File.expand_path(dest)
+
+      head = File.open(inpath,"r").read(512)
+      encoding_decl = "version=\"1.0\" encoding=\"#{encoding}\""
+
+      if head.include?("<?xml")
+        `cat #{inpath} | sed -re 's/xml[^\?]\+/xml #{encoding_decl} /' > #{outpath}`
+      else
+        `echo '<?xml #{encoding_decl} ?>' > #{outpath}`
+        `cat #{inpath} >> #{outpath}`
+      end
     end
 
     # uses an XSLT stylesheet provided by edituer to convert
