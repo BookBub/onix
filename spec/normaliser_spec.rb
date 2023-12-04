@@ -105,7 +105,7 @@ describe ONIX::Normaliser, "with a file with an incorrect encoding and a correct
     File.unlink(@outfile) if File.file?(@outfile)
   end
 
-  it "should treat the file as the given encoding and handle special characters" do
+  it "should treat the file as the given encoding and handle special characters and not edit any contained xml declarations" do
     ONIX::Normaliser.process(@filename, @outfile, { encoding: 'UTF-8' })
 
     File.file?(@outfile).should be_true
@@ -113,6 +113,7 @@ describe ONIX::Normaliser, "with a file with an incorrect encoding and a correct
 
     content.include?("RITA®").should be_true
     content.include?("face-to-face with her ex-fiancé").should be_true
+    content.include?('xml:lang="EN-GB"').should be_true
   end
 end
 

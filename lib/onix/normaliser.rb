@@ -108,7 +108,7 @@ module ONIX
       encoding_decl = "version=\"1.0\" encoding=\"#{encoding}\""
 
       if head.include?("<?xml")
-        `cat #{inpath} | sed -re 's/xml[^\?]\+/xml #{encoding_decl} /' > #{outpath}`
+        `cat #{inpath} | sed -re '1s/xml[^\?]\+/xml #{encoding_decl} /;t' > #{outpath}`
       else
         `echo '<?xml #{encoding_decl} ?>' > #{outpath}`
         `cat #{inpath} >> #{outpath}`
