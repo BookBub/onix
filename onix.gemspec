@@ -5,7 +5,6 @@ Gem::Specification.new do |s|
   s.description       = "A convient mapping between ruby objects and the ONIX XML specification"
   s.authors           = ["James Healy"]
   s.email             = ["jimmy@deefa.com"]
-  s.has_rdoc          = true
   s.homepage          = "http://github.com/yob/onix"
   s.rdoc_options     << "--title" << "ONIX - Working with the ONIX XML spec" <<
                         "--line-numbers"
